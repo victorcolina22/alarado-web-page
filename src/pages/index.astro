@@ -1,7 +1,52 @@
 ---
+import AlaradoIcon from "../components/icons/AlaradoIcon.astro";
+import CheckIcon from "../components/icons/CheckIcon.astro";
 import Layout from "../layouts/Layout.astro";
+import MenuIcon from "../components/icons/MenuIcon.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <h1>Hola mundo</h1>
+  <section class="p-5">
+    <header class="flex justify-between items-center">
+      <AlaradoIcon />
+      <MenuIcon width="30px" />
+    </header>
+
+    <main class="mt-20">
+      <img src="hero-image-simple-homepage.webp" alt="" />
+
+      <section class="flex flex-col justify-center items-start gap-5 mt-20">
+        <p class="uppercase text-base text-[#232D3B]">
+          😎 simple way to communicate
+        </p>
+        <h1 class="text-[3.75rem] font-extrabold text-[#232D3B]">
+          Actions for Accessibility in Design
+        </h1>
+        <p class="text-base text-[#5F687D]">
+          The fastest way to build and deploy websites with resusable
+          components.
+        </p>
+
+        <div class="flex gap-5 items-center">
+          <a
+            href="#"
+            class="uppercase bg-[#3047C6] text-[#EEEEEE] py-3 px-10 rounded-xl"
+            >get started</a
+          >
+          <a href="#" class="underline text-[#3047C6]">Get live demo</a>
+        </div>
+
+        <div class="flex gap-2 mb-5">
+          <div class="flex items-center gap-2">
+            <CheckIcon />
+            <span class="text-sm text-[#5F687D]">No credit card required</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <CheckIcon />
+            <span class="text-sm text-[#5F687D]">No software to install</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </section>
 </Layout>
