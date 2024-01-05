@@ -1,6 +1,7 @@
 ---
 import AlaradoIcon from "../components/icons/AlaradoIcon.astro";
 import CheckIcon from "../components/icons/CheckIcon.astro";
+import DarkLightToggle from "../components/DarkLightToggle.astro";
 import Layout from "../layouts/Layout.astro";
 import MenuIcon from "../components/icons/MenuIcon.astro";
 ---
@@ -9,20 +10,55 @@ import MenuIcon from "../components/icons/MenuIcon.astro";
   <section class="p-5">
     <header class="flex justify-between items-center">
       <AlaradoIcon />
-      <MenuIcon width="30px" />
+      <ul class="md:flex items-center gap-10 hidden">
+        <li>
+          <a
+            class="text-[#909193] hover:text-[#111729] transition-colors"
+            href="#">About us</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-[#909193] hover:text-[#111729] transition-colors"
+            href="#">Product</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-[#909193] hover:text-[#111729] transition-colors"
+            href="#">Resource</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-[#909193] hover:text-[#111729] transition-colors"
+            href="#">Contact</a
+          >
+        </li>
+      </ul>
+      <MenuIcon class="md:hidden block" width="30px" />
+      <DarkLightToggle />
     </header>
 
-    <main class="mt-20">
-      <img src="hero-image-simple-homepage.webp" alt="" />
+    <main
+      class="mt-20 max-w-6xl mx-auto grid xl:grid-cols-2 grid-cols-1 grid-row-1 items-center"
+    >
+      <img
+        class="object-cover xl:w-full xl:col-start-2 md:w-1/2 mx-auto animate-floating"
+        src="hero-image-simple-homepage.webp"
+        alt=""
+      />
 
-      <section class="flex flex-col justify-center items-start gap-5 mt-20">
-        <p class="uppercase text-base text-[#232D3B]">
+      <section
+        class="flex flex-col justify-center items-start gap-5 mt-20 xl:col-start-1 xl:row-start-1 md:px-28 xl:p-0 p-0"
+      >
+        <p class="uppercase text-base text-[#111729]">
           😎 simple way to communicate
         </p>
-        <h1 class="text-[3.75rem] font-extrabold text-[#232D3B]">
+        <h1 class="text-[3.75rem] font-extrabold text-[#111729]">
           Actions for Accessibility in Design
         </h1>
-        <p class="text-base text-[#5F687D]">
+        <p class="text-base text-[#909193]">
           The fastest way to build and deploy websites with resusable
           components.
         </p>
@@ -39,11 +75,11 @@ import MenuIcon from "../components/icons/MenuIcon.astro";
         <div class="flex gap-2 mb-5">
           <div class="flex items-center gap-2">
             <CheckIcon />
-            <span class="text-sm text-[#5F687D]">No credit card required</span>
+            <span class="text-sm text-[#909193]">No credit card required</span>
           </div>
           <div class="flex items-center gap-2">
             <CheckIcon />
-            <span class="text-sm text-[#5F687D]">No software to install</span>
+            <span class="text-sm text-[#909193]">No software to install</span>
           </div>
         </div>
       </section>

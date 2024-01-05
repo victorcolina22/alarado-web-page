@@ -1,0 +1,34 @@
+---
+import MoonFillIcon from "./icons/MoonFillIcon.astro";
+import MoonFillLightIcon from "./icons/MoonFillLightIcon.astro";
+import SunIcon from "./icons/SunIcon.astro";
+import SunLightIcon from "./icons/SunLightIcon.astro";
+---
+
+<label
+  class="cursor-pointer bg-[#111729] w-11 h-6 rounded-2xl relative hidden md:block"
+>
+  <input class="hidden group" type="checkbox" checked />
+  <div
+    class="w-6 h-6 rounded-full bg-[#FFFFFF] border-2 border-[#111729] transition-transform row-start-1"
+  >
+  </div>
+  <SunIcon class="sun absolute top-1/2 -translate-y-1/2 right-0" />
+  <SunLightIcon class="sun-light absolute top-1/2 -translate-y-1/2 right-0" />
+  <MoonFillIcon class="moon-fill absolute top-1/2 -translate-y-1/2 left-0" />
+  <MoonFillLightIcon
+    class="moon-fill-light hidden absolute top-1/2 -translate-y-1/2 left-0"
+  />
+</label>
+
+<style>
+  label input:checked ~ div {
+    transform: translateX(20px);
+  }
+  label input:checked ~ .moon-fill-light {
+    display: block;
+  }
+  label input:checked ~ .sun-light {
+    display: none;
+  }
+</style>

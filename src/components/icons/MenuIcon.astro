@@ -1,11 +1,11 @@
 ---
-const { ...rest } = Astro.props
+const { class:classes, ...rest } = Astro.props
 ---
 
 <svg
   {...rest}
   xmlns="http://www.w3.org/2000/svg"
-  class="icon icon-tabler icon-tabler-menu-2"
+  class={`icon icon-tabler icon-tabler-menu-2 ${classes}`}
   width="44"
   height="44"
   viewBox="0 0 24 24"
